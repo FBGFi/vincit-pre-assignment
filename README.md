@@ -9,3 +9,6 @@ or rebuild the application with `npm run build` after installing node_modules.
 
 After opening, simply submit the given date range you wish to get the market
 values from. Note that start date should be in the past.
+
+Note that the app was developed for Chrome, Firefox compatibility was checked
+but it might look a little different. Safari compatibility was not checked.
