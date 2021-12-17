@@ -1,0 +1,67 @@
+@import "styles/_breakpoints";
+.DataChart {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-color);
+  padding: 0.5rem;
+  overflow: auto visible;
+  min-height: 326px;
+
+  @media(min-width: $small-screen){
+    min-height: 36vw;
+  }
+
+  &::-webkit-scrollbar {
+    height: 1.5rem;
+  }
+  .volumes-range {
+    margin-left: auto;
+    margin-right: 0.5rem;
+  }
+  .price-range {
+    margin-left: 0.5rem;
+    margin-right: auto;
+  }
+  .volumes-range,
+  .price-range {
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+    margin-block: 1rem;
+    .high {
+      margin-top: 1rem;
+    }
+    .low {
+      margin-top: auto;
+      margin-bottom: 1rem;
+    }
+  }
+  .chart-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 500px;
+    .first {
+      margin-right: auto;
+    }
+    .last {
+      margin-left: auto;
+    }
+  }
+  span {
+    font-size: 0.7rem;
+  }
+  .volumes-label {
+    color: var(--secondary-color);
+  }
+  .prices-label {
+    color: red;
+  }
+  canvas {
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    // height: 20rem;
+  }
+}

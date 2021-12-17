@@ -1,0 +1,5 @@
+@import "styles/_dimensions";
+
+@function calculateRem($px) {
+  @return $px / $font-size * 1rem;
+}

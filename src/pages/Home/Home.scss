@@ -1,0 +1,21 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  .Modal{
+      .container{
+          width: 80%;
+          min-width: 320px;
+      }
+  }
+  .LoadingIndicator{
+      margin: auto;
+  }
+  &.loading-modal {
+    .BitCoinRangeForm {
+      display: none;
+    }
+  }
+  .BitCoinRangeForm {
+    margin: auto;
+  }
+}

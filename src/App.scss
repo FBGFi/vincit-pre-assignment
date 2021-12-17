@@ -1,0 +1,17 @@
+@import "styles/_colors";
+
+.App{
+    min-height: 100vh;
+    background: radial-gradient(farthest-corner at 3rem 3rem, transparent 80%, var(--secondary-color-faded) 100%),
+    radial-gradient(farthest-side at 2rem 2rem, var(--secondary-color-faded) 1%, transparent 90%),
+    var(--background-color);
+    display: flex;
+    flex-direction: column;
+    &>h1{
+        position: fixed;
+        padding: 1rem;
+        left: 0;
+        bottom: 0;
+        opacity: 0.1;
+    }
+}

@@ -1,0 +1,78 @@
+@import "styles/_colors";
+@import "styles/_breakpoints";
+@import "styles/_dimensions";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  margin: 0;
+}
+@function calc_relative_font_size(){
+  @return 100vw / $full-hd-value * $font-size;
+}
+:root {
+  font-size: $font-size-value;
+  // responsive sizes for bigger than full HD screens
+  @media (min-width: $full-hd) {
+    font-size: calc_relative_font_size();
+  }
+}
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border-radius: 100vw;
+  margin-block: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color-faded);
+  border-radius: 100vw;
+  border: 0.5rem solid var(--background-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  word-spacing: 0.07em;
+  word-break: break-word;
+  font-family: "Lato", "Arial", "Helvetica", sans-serif;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 7px 0 var(--secondary-color-inverted);
+  }
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--background-color);
+  border-radius: 1rem;
+  border: 1px solid var(--secondary-color);
+  color: #fff;
+  padding: 0.3rem 1.5rem;
+  &:hover {
+    filter: invert(0.05);
+  }
+}
+
+p,
+input,
+span,
+label,
+button {
+  font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--secondary-color);
+}

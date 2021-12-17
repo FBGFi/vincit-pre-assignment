@@ -1,0 +1,45 @@
+@import "styles/_functions";
+
+form {
+  background-color: var(--background-color-light);
+  min-width: calculateRem(320);
+  min-height: calculateRem(100);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+
+  label {
+    color: var(--secondary-color);
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  input{
+    padding: 0.2rem 0.5rem;
+    &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+  }
+
+  input,
+  button {
+    background-color: var(--background-color-inverted);
+    // this inversion was done so the calendar icon would be also inverted,
+    // not required if custom icon is used
+    filter: invert(1);
+    border-radius: 1rem;
+    border: 1px solid var(--secondary-color-inverted);   
+    color: #000; 
+  }
+
+  button {
+    margin-top: 1rem;
+    margin-left: auto;
+    padding: 0.3rem 1.5rem;
+    &:hover{
+        filter: invert(0.95);
+    }
+  }
+}
